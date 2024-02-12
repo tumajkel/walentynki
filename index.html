@@ -41,12 +41,16 @@
 <body>
     <h1>Hej, będziesz moją walentynką?</h1>
     <div class="buttons">
-        <a href="https://inna-strona.pl" class="button yes">Tak</a>
+        <a href="https://tumajkel.github.io/walentynki/stronka.html" class="button yes">Tak</a>
         <button class="button no" onclick="changeLocation()">Nie</button>
     </div>
     <script>
         function changeLocation() {
-            window.location.href = "https://nowa-lokalizacja.pl";
+            const randomX = Math.floor(Math.random() * window.innerWidth);
+            const randomY = Math.floor(Math.random() * window.innerHeight);
+            document.querySelector('.no').style.position = 'absolute';
+            document.querySelector('.no').style.left = `${randomX}px`;
+            document.querySelector('.no').style.top = `${randomY}px`;
         }
     </script>
 </body>
