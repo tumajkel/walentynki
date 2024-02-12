@@ -49,10 +49,13 @@
     </div>
     <script>
         function changeLocation() {
-            const randomX = Math.floor(Math.random() * (window.innerWidth - 200)); // Dostosuj 200 do szerokości przycisku
-            const randomY = Math.floor(Math.random() * (window.innerHeight - 50)); // Dostosuj 50 do wysokości przycisku
-            document.querySelector('.no').style.left = `${randomX}px`;
-            document.querySelector('.no').style.top = `${randomY}px`;
+            const noButton = document.querySelector('.no');
+            const buttonWidth = noButton.offsetWidth;
+            const buttonHeight = noButton.offsetHeight;
+            const randomX = Math.floor(Math.random() * (window.innerWidth - buttonWidth));
+            const randomY = Math.floor(Math.random() * (window.innerHeight - buttonHeight));
+            noButton.style.left = `${randomX}px`;
+            noButton.style.top = `${randomY}px`;
         }
     </script>
 </body>
