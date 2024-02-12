@@ -13,7 +13,7 @@
             overflow: hidden; /* Zapobiega przewijaniu strony */
         }
         h1 {
-            font-size: 26px;
+            font-size: 24px;
             color: black;
             margin-top: 100px;
         }
@@ -38,6 +38,10 @@
             background-color: #FF5733;
             color: white;
             position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px; /* Dostosuj szerokość przycisku */
         }
     </style>
 </head>
@@ -49,8 +53,8 @@
     </div>
     <script>
         function changeLocation() {
-            const randomX = Math.floor(Math.random() * (window.innerWidth - buttonWidth));
-            const randomY = Math.floor(Math.random() * (window.innerHeight - buttonHeight));
+            const randomX = Math.floor(Math.random() * (window.innerWidth - 200)); // Dostosuj 200 do szerokości przycisku
+            const randomY = Math.floor(Math.random() * (window.innerHeight - 50)); // Dostosuj 50 do wysokości przycisku
             document.querySelector('.no').style.left = `${randomX}px`;
             document.querySelector('.no').style.top = `${randomY}px`;
         }
