@@ -18,6 +18,7 @@
         }
         .buttons {
             margin-top: 20px;
+            position: relative;
         }
         .button {
             display: inline-block;
@@ -35,20 +36,23 @@
         .no {
             background-color: #FF5733;
             color: white;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
         }
     </style>
 </head>
 <body>
     <h1>Hej, będziesz moją walentynką?</h1>
     <div class="buttons">
-        <a href="https://tumajkel.github.io/walentynki/stronka.html" class="button yes">Tak</a>
+        <a href="https://inna-strona.pl" class="button yes">Tak</a>
         <button class="button no" onclick="changeLocation()">Nie</button>
     </div>
     <script>
         function changeLocation() {
-            const randomX = Math.floor(Math.random() * window.innerWidth);
-            const randomY = Math.floor(Math.random() * window.innerHeight);
-            document.querySelector('.no').style.position = 'absolute';
+            const randomX = Math.floor(Math.random() * (window.innerWidth - 100)); // Adjust 100 to button width
+            const randomY = Math.floor(Math.random() * (window.innerHeight - 50)); // Adjust 50 to button height
             document.querySelector('.no').style.left = `${randomX}px`;
             document.querySelector('.no').style.top = `${randomY}px`;
         }
