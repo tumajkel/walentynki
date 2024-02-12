@@ -13,18 +13,16 @@
             overflow: hidden; /* Zapobiega przewijaniu strony */
         }
         h1 {
-            font-size: 24px;
+            font-size: 26px;
             color: black;
             margin-top: 100px;
         }
         .buttons {
             margin-top: 20px;
             position: relative;
-            display: inline-flex;
-            justify-content: center;
-            width: 100%;
         }
         .button {
+            display: inline-block;
             margin: 10px;
             padding: 10px 20px;
             border: none;
@@ -51,13 +49,10 @@
     </div>
     <script>
         function changeLocation() {
-            const noButton = document.querySelector('.no');
-            const buttonWidth = noButton.offsetWidth;
-            const buttonHeight = noButton.offsetHeight;
             const randomX = Math.floor(Math.random() * (window.innerWidth - buttonWidth));
             const randomY = Math.floor(Math.random() * (window.innerHeight - buttonHeight));
-            noButton.style.left = `${randomX}px`;
-            noButton.style.top = `${randomY}px`;
+            document.querySelector('.no').style.left = `${randomX}px`;
+            document.querySelector('.no').style.top = `${randomY}px`;
         }
     </script>
 </body>
