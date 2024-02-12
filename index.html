@@ -42,6 +42,7 @@
             color: white;
             position: absolute;
             width: auto; /* Zmieniamy szerokość przycisku na auto */
+            top: 50px; /* Ustawiamy przycisk pod przyciskiem TAK */
         }
     </style>
 </head>
@@ -56,8 +57,8 @@
             const button = document.querySelector('.no');
             const buttonWidth = button.offsetWidth;
             const buttonHeight = button.offsetHeight;
-            const randomX = Math.floor(Math.random() * (window.innerWidth - buttonWidth - 20)); // Dostosuj 20 do marginesu przycisku
-            const randomY = Math.floor(Math.random() * (window.innerHeight - buttonHeight - 20)); // Dostosuj 20 do marginesu przycisku
+            const randomX = Math.floor(Math.random() * (window.innerWidth - buttonWidth - 40)); // Dostosuj 40 do marginesu przycisku
+            const randomY = Math.floor(Math.random() * (window.innerHeight - buttonHeight - 80)); // Dostosuj 80 do marginesu przycisku
             button.style.left = `${randomX}px`;
             button.style.top = `${randomY}px`;
         }
