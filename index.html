@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/736x/08/99/b8/0899b871a05f7a681a7888093ed4e366.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            color: white;
+            margin-top: 100px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .no {
+            background-color: #FF5733;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hej, będziesz moją walentynką?</h1>
+    <div class="buttons">
+        <a href="https://inna-strona.pl" class="button yes">Tak</a>
+        <button class="button no" onclick="changeLocation()">Nie</button>
+    </div>
+    <script>
+        function changeLocation() {
+            window.location.href = "https://nowa-lokalizacja.pl";
+        }
+    </script>
+</body>
+</html>
