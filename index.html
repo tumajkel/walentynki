@@ -20,6 +20,9 @@
         .buttons {
             margin-top: 20px;
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .button {
             display: inline-block;
@@ -38,9 +41,6 @@
             background-color: #FF5733;
             color: white;
             position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
             width: 200px; /* Dostosuj szerokość przycisku */
         }
     </style>
@@ -53,10 +53,13 @@
     </div>
     <script>
         function changeLocation() {
-            const randomX = Math.floor(Math.random() * (window.innerWidth - 200)); // Dostosuj 200 do szerokości przycisku
-            const randomY = Math.floor(Math.random() * (window.innerHeight - 50)); // Dostosuj 50 do wysokości przycisku
-            document.querySelector('.no').style.left = `${randomX}px`;
-            document.querySelector('.no').style.top = `${randomY}px`;
+            const button = document.querySelector('.no');
+            const buttonWidth = button.offsetWidth;
+            const buttonHeight = button.offsetHeight;
+            const randomX = Math.floor(Math.random() * (window.innerWidth - buttonWidth - 20)); // Dostosuj 20 do marginesu przycisku
+            const randomY = Math.floor(Math.random() * (window.innerHeight - buttonHeight - 20)); // Dostosuj 20 do marginesu przycisku
+            button.style.left = `${randomX}px`;
+            button.style.top = `${randomY}px`;
         }
     </script>
 </body>
